@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqi2vp7faodcy"]
+
+[ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_ocitw"]
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ocitw")
+hframes = 12
+vframes = 11
+frame = 108
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, -6, 2, -6, 5, -4, 7, 2, 7, 5, 4, 7, -3, 7, -7, 5, -7, 1)
