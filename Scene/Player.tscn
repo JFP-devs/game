@@ -1,10 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5h4d2lrrpys0"]
+[gd_scene load_steps=4 format=3 uid="uid://c5h4d2lrrpys0"]
 
 [ext_resource type="Texture2D" uid="uid://bqpvlj3n5gy8" path="res://Assets/tilemap.png" id="1_s5f4u"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="1_vmms7"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="3_lqntc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wseag"]
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_vmms7")
@@ -15,8 +13,8 @@ hframes = 12
 vframes = 11
 frame = 84
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_wseag")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_lqntc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, -8, -6, -8, -8, -6, -9, 2, -9, 8, -7, 9, 8, 9, 7, -5)
