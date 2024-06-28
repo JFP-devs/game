@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bk7abkoo7plbc"]
+[gd_scene load_steps=3 format=3 uid="uid://bk7abkoo7plbc"]
 
 [ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_ok1dx"]
+[ext_resource type="Script" path="res://Scripts/weapon/ranged_weapon.gd" id="1_ptdxn"]
 
 [node name="DefaultWeapon" type="Area2D"]
+script = ExtResource("1_ptdxn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ok1dx")
