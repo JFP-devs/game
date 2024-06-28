@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqpvlj3n5gy8" path="res://Assets/tilemap.png" id="1_s5f4u"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="1_vmms7"]
-[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_lqntc"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_wbkf6"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vmms7")
@@ -14,7 +14,11 @@ vframes = 11
 frame = 84
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("3_lqntc")
+script = ExtResource("3_wbkf6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-1, -8, -6, -8, -8, -6, -9, 2, -9, 8, -7, 9, 8, 9, 7, -5)
+
+[node name="WeaponSlot" type="Node2D" parent="."]
+position = Vector2(11, 0)
+rotation = 0.785398

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_ok1dx"]
 
-[node name="DefaultWeapon" type="RigidBody2D"]
+[node name="DefaultWeapon" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ok1dx")
