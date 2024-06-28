@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvkk7nsk36jwp"]
+
+[ext_resource type="Script" path="res://Scripts/spawn.gd" id="1_87dco"]
+[ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_iqekc"]
+
+[node name="Spawn" type="StaticBody2D"]
+script = ExtResource("1_87dco")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, -7, 3, -7, 6, -5, 6, -5, 7, -3, 7, 3, 4, 3, 4, 7, -4, 7, -4, 3, -7, 2, -7, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iqekc")
+hframes = 12
+vframes = 11
+frame = 64
+
+[node name="Timer" type="Timer" parent="."]
