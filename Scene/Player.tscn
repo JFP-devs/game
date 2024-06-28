@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bqpvlj3n5gy8" path="res://Assets/tilemap.png" id="1_s5f4u"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="1_vmms7"]
-[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="3_lqntc"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_lqntc"]
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vmms7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
