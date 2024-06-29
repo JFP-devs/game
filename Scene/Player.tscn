@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5h4d2lrrpys0"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_33nsi"]
 [ext_resource type="Texture2D" uid="uid://bqpvlj3n5gy8" path="res://Assets/tilemap.png" id="1_s5f4u"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_w8tgo"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_wbkf6"]
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_33nsi")
+script = ExtResource("1_w8tgo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_s5f4u")
