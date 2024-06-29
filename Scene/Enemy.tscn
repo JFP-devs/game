@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqi2vp7faodcy"]
+[gd_scene load_steps=3 format=3 uid="uid://dqi2vp7faodcy"]
 
+[ext_resource type="Script" path="res://Scene/Enemy_movement.gd" id="1_8pqbb"]
 [ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_ocitw"]
 
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_8pqbb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ocitw")

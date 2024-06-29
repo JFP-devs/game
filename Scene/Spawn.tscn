@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvkk7nsk36jwp"]
+[gd_scene load_steps=4 format=3 uid="uid://dvkk7nsk36jwp"]
 
 [ext_resource type="Script" path="res://Scripts/spawn.gd" id="1_87dco"]
 [ext_resource type="Texture2D" uid="uid://11dqq6dqo1ya" path="res://Assets/tilemap_packed.png" id="1_iqekc"]
+
+[sub_resource type="Curve2D" id="Curve2D_6qge1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -16, -16, 0, 0, 0, 0, 16, -16, 0, 0, 0, 0, 16, 16, 0, 0, 0, 0, -16, 16, 0, 0, 0, 0, -16, -16)
+}
+point_count = 5
 
 [node name="Spawn" type="StaticBody2D"]
 script = ExtResource("1_87dco")
@@ -16,3 +22,9 @@ vframes = 11
 frame = 64
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_6qge1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-16, -16)
