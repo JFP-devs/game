@@ -15,6 +15,6 @@ func _find_closest_player(players):
 
 func _physics_process(delta):
 	var players = get_tree().get_nodes_in_group("player")
-	var closest_player = _find_closest_player(players)
-	print(closest_player)
+	var closest_player = players[0] #_find_closest_player(players)
+	velocity = (closest_player.position - global_position).normalized() * 150
 	move_and_slide()
