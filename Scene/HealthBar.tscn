@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://fssxoh6n3jdp"]
+
+[ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="1_gk3vb"]
+
+[node name="HealthBar" type="ProgressBar"]
+custom_minimum_size = Vector2(50, 10)
+value = 100.0
+show_percentage = false
+script = ExtResource("1_gk3vb")

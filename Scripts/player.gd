@@ -8,6 +8,8 @@ var current_weapon: Weapon = null
 func _ready():
 	# Equip default weapon
 	equip_weapon(preload("res://Scene/DefaultWeapon.tscn"))
+	var hpb = preload("res://Scene/HealthBar.tscn")
+	$Camera2D/Control.add_child(hpb.instantiate())
 
 func _physics_process(_delta):
 	velocity = Vector2.ZERO # The player's movement vector.
