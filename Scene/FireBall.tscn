@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwb22yhnpwwc"]
+
+[ext_resource type="Texture2D" uid="uid://bhv5edtofl3nu" path="res://Assets/fire_ball.png" id="1_7n45t"]
+[ext_resource type="Script" path="res://Scripts/FireBall.gd" id="1_8whhx"]
+
+[node name="FireBall" type="Area2D"]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("1_8whhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+texture = ExtResource("1_7n45t")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-1, 1)
+polygon = PackedVector2Array(3, -9, 5, -9, 5, -8, 6, -8, 6, -7, 7, -7, 7, -6, 8, -6, 8, -4, 9, -4, 9, 1, 8, 1, 8, 3, 7, 3, 7, 4, 6, 4, 6, 5, 5, 5, 5, 6, 3, 6, 3, 7, -2, 7, -2, 6, -4, 6, -4, 5, -5, 5, -5, 4, -6, 4, -6, 3, -7, 3, -7, 1, -8, 1, -8, -4, -7, -4, -7, -6, -6, -6, -6, -7, -5, -7, -5, -8, -4, -8, -4, -9, -2, -9, -2, -10, 3, -10)
