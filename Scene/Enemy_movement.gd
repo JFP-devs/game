@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 350.0
 
+signal hit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
@@ -18,3 +19,7 @@ func _physics_process(delta):
 	var closest_player = players[0] #_find_closest_player(players)
 	velocity = (closest_player.position - global_position).normalized() * 150
 	move_and_slide()
+
+
+func _on_hit():
+	print("hit")

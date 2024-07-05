@@ -1,6 +1,7 @@
 extends Area2D
 
 
+
 var speed = 400
 var direction
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,5 +15,8 @@ func _ready():
 func _physics_process(delta):
 	position += direction * speed * delta
 	
-func _on_Bullet_body_entered():
+
+func _on_body_entered(body):
 	queue_free()
+	print("body entered")
+	body.queue_free()
