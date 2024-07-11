@@ -10,7 +10,9 @@ func _ready():
 func attack():
 	if ammo > 0:
 		var projectile = projectile_scene.instantiate()
-		self.add_child(projectile)
+		projectile.global_position = get_parent().global_position
+		get_tree().current_scene.add_child(projectile)
+		#.add_child(projectile)
 		ammo -= 1
 		print("Shooting ranged weapon with damage: %d" % damage)
 	else:

@@ -3,7 +3,7 @@ extends Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	zoom = Vector2(3, 3)  #check le zoom de la cam
+	zoom = Vector2(1,1)  #check le zoom de la cam
 	
 
 

@@ -4,11 +4,11 @@ extends CharacterBody2D
 @export var speed = 400
 
 var current_weapon: Weapon = null
-
+var hpb
 func _ready():
 	# Equip default weapon
 	equip_weapon(preload("res://Scene/DefaultWeapon.tscn"))
-	var hpb = preload("res://Scene/HealthBar.tscn")
+	hpb = preload("res://Scene/HealthBar.tscn")
 	$Camera2D/Control.add_child(hpb.instantiate())
 
 func _physics_process(_delta):

@@ -2,18 +2,22 @@ extends Area2D
 
 
 
-var speed = 400
+var speed = 100
 var direction
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _ready():
-	var cursor = get_local_mouse_position()
-	var weapon_slot = get_parent()
-	direction = weapon_slot.position.direction_to(cursor)
-	
+	direction = (get_global_mouse_position() - global_position).normalized()
+	#get_tree().current_scene.add_child(self)
+	#self.global_position = self.global_position
 	pass
 
-func _physics_process(delta):
-	position += direction * speed * delta
+func _process(delta):
+	global_position += direction * speed * delta
+
+
+#func _physics_process(delta):
+	#global_position += direction * speed * delta
+	#pass
 	
 
 func _on_body_entered(body):
