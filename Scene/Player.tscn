@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5h4d2lrrpys0"]
+[gd_scene load_steps=4 format=3 uid="uid://c5h4d2lrrpys0"]
 
-[ext_resource type="Texture2D" uid="uid://bqpvlj3n5gy8" path="res://Assets/tilemap.png" id="1_s5f4u"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_w8tgo"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_wbkf6"]
 [ext_resource type="Texture2D" uid="uid://baqpgvia4bqd" path="res://Assets/v3.png" id="4_khabl"]
@@ -8,13 +7,6 @@
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 19
 script = ExtResource("1_w8tgo")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_s5f4u")
-hframes = 12
-vframes = 11
-frame = 84
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_wbkf6")

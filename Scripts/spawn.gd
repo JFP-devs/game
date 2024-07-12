@@ -3,7 +3,6 @@ extends StaticBody2D
 var enemy_scene
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	return
 	var timer = $Timer
 	timer.connect("timeout", self._on_Timer_timeout)
 	timer.wait_time = 5.0
